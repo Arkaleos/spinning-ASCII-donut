@@ -1,4 +1,4 @@
-from os import system
+from os import system, name
 import math
 
 
@@ -97,7 +97,7 @@ def render_frame(A, B):
         theta += theta_jump
 
     # Clearing old frame and printing new frame
-    system('cls')
+    system('cls' if name == 'nt' else 'clear')
     for i in range(screen_width):
         for j in range(screen_height):
             print(output[i][j], end='')
