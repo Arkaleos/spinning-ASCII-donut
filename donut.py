@@ -1,5 +1,5 @@
 from os import system, name
-import math
+from math import sin, cos, pi
 
 
 # Screen dimensions
@@ -25,10 +25,10 @@ K1 = (screen_width-2)*K2*3/(8*(R1+R2))
 def render_frame(A, B):
 
     # Precomputing sines an cosines
-    cosA = math.cos(A)
-    sinA = math.sin(A)
-    cosB = math.cos(B)
-    sinB = math.sin(B)
+    cosA = cos(A)
+    sinA = sin(A)
+    cosB = cos(B)
+    sinB = sin(B)
 
     # Creating 2D arrays
     output = []
@@ -42,20 +42,20 @@ def render_frame(A, B):
     # Value of theta increases until it completes a rotation around the
     # cross-sectional circle of the torus
     theta = 0
-    while theta < 2*math.pi:
+    while theta < 2*pi:
 
         # Precomputing sines and cosines of theta
-        costheta = math.cos(theta)
-        sintheta = math.sin(theta)
+        costheta = cos(theta)
+        sintheta = sin(theta)
 
         # Value of phi increases until the circle completes a revolution around
         # the center of the torus
         phi = 0
-        while phi < 2*math.pi:
+        while phi < 2*pi:
 
             # Precomputing sines and cosines of phi
-            cosphi = math.cos(phi)
-            sinphi = math.sin(phi)
+            cosphi = cos(phi)
+            sinphi = sin(phi)
 
             # (x, y) coordinates of the circle before revolution
             circlex = R2 + R1*costheta
