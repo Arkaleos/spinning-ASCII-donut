@@ -90,7 +90,7 @@ def render_frame(A, B):
                     # Now the luminance_index is in the range 0..11 (8*sqrt(2)
                     # = 11.3) now we lookup the character corresponding to the
                     # luminance and plot it in our output.
-                    output[xp][yp] = ".,-~:;=!*#$@"[luminance_index]
+                    output[xp][yp] = '.,-~:;=!*#$@'[luminance_index]
 
             phi += phi_jump
 
@@ -108,8 +108,8 @@ if __name__ == "__main__":
     A = 1
     B = 1
 
-    # Calling render_frame() 300 times
-    for i in range(300):
+    # Calling render_frame() n times
+    for i in range(int(input('How many frames do you want to render: '))):
         render_frame(A, B)
         A += 0.07
         B += 0.03
