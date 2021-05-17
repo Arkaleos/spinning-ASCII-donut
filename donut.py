@@ -109,7 +109,7 @@ if __name__ == "__main__":
     B = 1
 
     # Calling render_frame() n times
-    for i in range(int(input('How many frames do you want to render: '))):
+    while True:
         render_frame(A, B)
         A += 0.07
         B += 0.03
